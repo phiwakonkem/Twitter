@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FakeTwitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+if (!localStorage.getItem("loggedIn")) {
+    window.location.href = "login.html";
+}
+</script>
+
+<div class="container">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="Pictures/Logo.png">
+        </div>
+
+
+        <nav>
+            <ul>
+                <li>
+                    <span class="material-symbols-outlined">Home</span>
+                    <span>Home</span>
+                </li>
+                <li> 
+                    <span class="material-symbols-outlined">Search</span>
+                    <span>Explore</span>
+                </li>
+                <li>
+                    <span class="material-symbols-outlined">Notifications</span>
+                    <span>Notifications</span>
+                </li>
+                <li> 
+                    <span class="material-symbols-outlined">Person_add</span>
+                    <span>Follow</span>
+                </li>
+                <li>
+                    <span class="material-symbols-outlined">Message</span>
+                    <span>Chat</span>
+                </li>
+                <li>
+                    <img src="Pictures/Grok.png">
+                    <span>Grok</span>
+                </li>
+                <li> 
+                    <span class="material-symbols-outlined">Person</span>
+                    <span>Profile</span>
+                </li>
+                <li>
+                    <span class="material-symbols-outlined">Pending</span>
+                    <span>More</span>
+                </li>
+            </ul>
+        </nav>
+
+        <button class="post-btn">Post</button>
+        <button id="logoutBtn">Logout</button>
+        
+        <div class="my-account-section">
+            <div class="my-account-profilepicture">
+                <img src="Pictures/Account.png">
+            </div>
+            <div class="my-account-details">
+                <span class="my-account-name">Phiwakonke</span>
+                <span class="my-account-username">@phiwakonkem</span>
+            </div>    
+            <div class="my-account-options">
+                <div class="material-symbols-outlined">More_horiz</div>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- MAIN FEED -->
+    <main class="feed">
+
+        <!-- FOR YOU & FOLLOWING -->
+        <div class="for-you-following-section">
+            <span class="fyp">For You</span>
+            <span class="following">Following</span>
+        </div>
+        <!-- Tweet Box -->
+        <div class="tweet-box">
+            <span>
+                <img src="Pictures/Account.png">
+                <textarea id="tweetInput" placeholder="What’s happening?"></textarea>
+            </span>
+            <div class="tweet-box-footer">
+                <div class="tweet-box-icons">
+                    <div class="material-symbols-outlined">Image</div>
+                    <div class="material-symbols-outlined">Gif_box</div>
+                    <div class="material-symbols-outlined">List</div>
+                    <div class="material-symbols-outlined">Sentiment_satisfied</div>
+                    <div class="material-symbols-outlined">Calendar_clock</div>
+                    <div class="material-symbols-outlined">Location_on</div>
+                </div>
+                <button id="postTweet">Post</button>
+                
+            </div>   
+        </div>
+
+        <!-- Timeline -->
+        <div id="timeline">
+            <div class="posts">
+                <div class="post-details">
+                    <div class="post-profilepicture">
+                        <img src="Pictures/FCBarca.jpg">
+                    </div>
+                    <div class="post-account-details">
+                        <span class="post-account-name">FC Barcelona</span>
+                        <span class="post-account-username">@FCBarcelona</span>
+                        <span class="post-time">· Feb 3</span>
+                        <div class="post-caption">
+                            <span>✨MATCHDAY✨</span>
+                        </div>
+                    </div>
+                </div>    
+                <div class="post-thumbnail">
+                    <img src="Pictures/Thumbnail.jpg">
+                </div>
+                <div class="post-footer">
+                        <div class="post-action">
+                            <span class="material-symbols-outlined">chat_bubble</span>
+                            <span>107</span>
+                        </div>
+                        <div class="post-action">
+                            <span class="material-symbols-outlined">repeat</span>
+                            <span>755</span>
+                        </div>
+                        <div class="post-action">
+                            <span class="material-symbols-outlined">favorite</span>
+                            <span>11K</span>
+                        </div>
+                        <div class="post-action">
+                            <span class="material-symbols-outlined">leaderboard</span>
+                            <span>94K</span>
+                        </div>
+                        <div class="post-action">
+                            <span class="material-symbols-outlined">bookmark</span>
+                        </div>
+                        <div class="post-action">
+                            <span class="material-symbols-outlined">share</span>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+            <div class="posts">
+                <div class="post-details">
+                    <div class="post-profilepicture">
+                        <img src="Pictures/ALHILAL.png">
+                    </div>
+                    <div class="post-account-details">
+                        <span class="post-account-name">AlHilal Saudi Club</span>
+                        <span class="post-account-username">@Alhilal_EN</span>
+                        <span class="post-time">· Feb 2</span>
+                        <div class="post-caption">
+                            <span>French star Karim Benzema joins Al-Hilal</span>
+                        </div>
+                    </div>
+                </div>    
+                <div class="post-thumbnail">
+                    <img src="Pictures/Thumbnail2.jpg">
+                </div>
+                <div class="post-footer">
+                        <div class="post-action">
+                            <span class="material-symbols-outlined">chat_bubble</span>
+                            <span>108</span>
+                        </div>
+                        <div class="post-action">
+                            <span class="material-symbols-outlined">repeat</span>
+                            <span>1.9K</span>
+                        </div>
+                        <div class="post-action">
+                            <span class="material-symbols-outlined">favorite</span>
+                            <span>7.5K</span>
+                        </div>
+                        <div class="post-action">
+                            <span class="material-symbols-outlined">leaderboard</span>
+                            <span>151K</span>
+                        </div>
+                        <div class="post-action">
+                            <span class="material-symbols-outlined">bookmark</span>
+                        </div>
+                        <div class="post-action">
+                            <span class="material-symbols-outlined">share</span>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="right-sidebar">
+        <div class="right-sidebar-top">
+            <input type="text" placeholder="Search" id="searchInput">
+        </div>
+        <div class="subscription-section">
+            <div class="subscription-title">
+                <h2>Subscrbe to Premium</h2>
+            </div>
+            <div class="subscription-description">
+                <p>Subscribe to unlock features and if eligible, receive a share of revenue.</p>
+            </div>
+            <div class="subscription-button">
+                <button id="subscribeBtn">Subscribe</button>
+            </div>
+        </div>
+        <div class="Todays-News">
+            <div class="todays-news-title">
+                <h2>Today's News</h2>
+            </div>
+            <div class="todays-news-info">
+                <div class="todays-news-caption">
+                    <span>Dashcam Captures Fatal Attack on Pretoria E-Hailing Driver</span>
+                </div>
+                <div class="todays-news-account-details">
+                    <div class="todays-news-profilepicture">
+                        <img src="Pictures/NCA.png">
+                    </div>
+                    <div class="todays-news-timestamp">
+                        <span>6 hours ago</span>
+                    </div>
+                    <div class="todays-news-category">
+                        <span>·News</span>
+                    </div>
+                    <div class="todays-news-algorithm">
+                        <span>·66.9K posts</span>
+                    </div>
+                </div>
+            </div>
+            <div class="todays-news-info">
+                <div class="todays-news-caption">
+                    <span>Lewis Hamilton, Kim Kardashian attend Super Bowl Together</span>
+                </div>
+                <div class="todays-news-account-details">
+                    <div class="todays-news-profilepicture">
+                        <img src="Pictures/TMZ.png">
+                    </div>
+                    <div class="todays-news-timestamp">
+                        <span>2 hours ago</span>
+                    </div>
+                    <div class="todays-news-category">
+                        <span>·Entertainmnet</span>
+                    </div>
+                    <div class="todays-news-algorithm">
+                        <span>·109K posts</span>
+                    </div>
+                </div>
+                <div class="todays-news-showmore">
+                    <span>Show more</span>
+                </div> 
+            </div>
+        </div>
+        <div class="trending-section">
+            <div class="trending-section-title">
+                <h2>What's happening</h2>
+            </div>
+            <div class="trending-section-description">
+                <div class="trending-topics">
+                    <div class="topic-info">
+                        <span class="topic-location">Trending In South Africa</span>
+                        <span class="topic">Zaio</span>
+                    </div>
+                    <div class="topic-info">
+                        <span class="topic-location">Trending In South Africa</span>
+                        <span class="topic">BafanaBafana</span>
+                    </div>
+                    <div class="topic-info">
+                        <span class="topic-location">Trending In South Africa</span>
+                        <span class="topic">WebDev</span>
+                    </div>
+                    <div class="topic-info">
+                        <span class="topic-location">Trending In South Africa</span>
+                        <span class="topic">JavaScript</span>    
+                    </div>
+                </div>    
+            </div>
+            <div class="trending-section-showmore">
+                <span>Show more</span>
+            </div>    
+        </div>
+        <div class="suggested-accounts-section">
+            <div class="suggested-accounts-title">
+                <h2>Who to follow</h2>
+            </div>
+            <div class="suggested-accounts-info">
+                <div class="suggested-accounts-profilepicture">
+                    <img src="Pictures/NYT.png">
+                </div>
+                <div class="suggested-accounts-details">
+                    <span class="suggested-accounts-name">The New York Times</span>
+                    <span class="suggested-accounts-username">@nytimes</span>
+                </div>
+                <div class="suggested-accounts-followbutton">
+                    <button id="followBtn">Follow</button>
+                </div>        
+            </div>
+            <div class="suggested-accounts-info">
+                <div class="suggested-accounts-profilepicture">
+                    <img src="Pictures/BBC.png">
+                </div>
+                <div class="suggested-accounts-details">
+                    <span class="suggested-accounts-name">The BBC News</span>
+                    <span class="suggested-accounts-username">@BBC</span>
+                </div>
+                <div class="suggested-accounts-followbutton">
+                    <button id="followBtn">Follow</button>
+                </div>        
+            </div>
+            <div class="suggested-accounts-info">
+                <div class="suggested-accounts-profilepicture">
+                    <img src="Pictures/CNN.png">
+                </div>
+                <div class="suggested-accounts-details">
+                    <span class="suggested-accounts-name">The CNN News</span>
+                    <span class="suggested-accounts-username">@CNN</span>
+                </div>
+                <div class="suggested-accounts-followbutton">
+                    <button id="followBtn">Follow</button>
+                </div>        
+            </div>
+        </div>
+        <button id="darkModeToggle">Toggle For Mode</button>
+    </aside>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* LEFT SIDEBAR */
+.sidebar {
+    width: 25%;
+    padding: 0px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.logo img {
+    width: 40px;
+    padding: 10px 0px;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+nav ul li .material-symbols-outlined {
+    font-size: 48px;
+}
+
+nav ul li span {
+    font-size: 18px;
+}
+nav ul li:hover {
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    padding-left: 10px;
+    transition: 0.2s ease;
+}
+.dark nav ul li:hover {
+    background-color: #22303c;
+}
+
+li img {
+    width: 40px;
+    padding: 10px 0px;
+}
+.post-btn {
+    margin: 20px 0px;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 22px;
+    cursor: pointer;
+}
+#darkModeToggle {
+    margin: 20px 0px;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 22px;
+    justify-content: center;
+    cursor: pointer;
+}
+#logoutBtn {
+    margin: 20px 0px;
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 22px;
+    cursor: pointer;
+}
+.my-account-section {
+    padding: 15px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.my-account-profilepicture img {
+    align-items: center;
+    width: 40px;
+    border-radius: 22px;
+}
+.my-account-details {
+    align-items: center;
+    display: grid;
+    margin: 20px;
+}
+.my-account-name {
+    font-weight: 600;
+}
+
+/* FEED */
+.feed {
+    width: 50%;
+    margin-left: 24%;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+.for-you-following-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+}
+.dark .for-you-following-section {
+    background-color: #15202b;
+}
+
+.tweet-box {
+    padding: 0px 20px;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+}
+.tweet-box span {
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+}
+.tweet-box img {
+    width: 40px;
+    border-radius: 22px;
+}
+#tweetInput {
+    font-size: 1.3rem;
+}
+.tweet-box-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0px;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 25px;
+    height: 70px;
+}
+.tweet-box-footer .material-symbols-outlined {
+    font-size: 1.3rem;
+}
+
+.tweet-box-icons {
+    display: flex;
+    gap: 45px;
+    color: #1da1f2;
+}
+.tweet-box-icons .material-symbols-outlined:hover {
+    background-color: #e8f5fe;
+    border-radius: 50%;
+    padding: 5px;
+}
+.dark .tweet-box-icons .material-symbols-outlined:hover {
+    background-color: #22303c;
+}
+
+.tweet-box-footer #postTweet {
+    padding: 8px 18px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tweet {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+#timeline {
+    margin: 12px;
+}
+.posts {
+    border-bottom: 1px solid #ddd;
+}
+.post-details {
+    display: flex;
+}
+.post-profilepicture img {
+    width: 40px;
+    height: 40px;
+    border-radius: 22px;
+    margin: 0px 10px;
+}
+.post-account-details {
+    margin: 0px 15px;
+}
+.post-thumbnail {
+    display: flex;
+    padding: 0px 10px;
+}
+.post-thumbnail img {
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+.posts:hover {
+    background-color: #f7f9f9;
+    transition: 0.2s ease;
+}
+.dark .posts:hover {
+    background-color: #1e2732;
+}
+
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 20px;
+    color: #536471;
+    font-size: 14px;
+}
+
+.post-action {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.post-action .material-symbols-outlined {
+    font-size: 20px;
+    padding: 6px;
+    border-radius: 50%;
+    transition: 0.2s ease;
+}
+.post-action:hover {
+    color: #1da1f2;
+}
+
+.post-action:hover .material-symbols-outlined {
+    background-color: rgba(29, 161, 242, 0.1);
+}
+.post-action:hover {
+    color: #1da1f2;
+}
+
+.post-action:hover .material-symbols-outlined {
+    background-color: rgba(29, 161, 242, 0.1);
+}
+
+/* RIGHT SIDEBAR */
+.right-sidebar {
+    position: absolute;
+    width: 25%;
+    padding: 10px 20px;
+    height: 100vh;
+    top: 0;
+    right: calc((100% - 1300px) / 2);
+}
+.right-sidebar-top {
+    position: sticky;
+    top: 0;
+    width: 320px;
+    background-color: white;
+    padding: 10px 20px;
+    z-index: 20;
+}
+.dark .right-sidebar-top {
+    background-color: #15202b;
+}
+#searchInput {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: #eff3f4;
+    outline: none;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+
+#searchInput:focus {
+    background-color: white;
+    border: 1px solid #1da1f2;
+}
+.dark #searchInput {
+    background-color: #22303c;
+    color: white;
+}
+
+.dark #searchInput:focus {
+    background-color: #15202b;
+    border: 1px solid #1da1f2;
+}
+
+.right-sidebar ul {
+    list-style: none;
+}
+
+.right-sidebar li {
+    padding: 10px 0;
+}
+.subscription-section {
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 320px;
+    height: 150px;
+    border: 1px solid #ddd;
+}
+.subscription-title h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+} 
+.subscription-description p {
+    color: #536471;
+    margin-bottom: 10px;
+}
+#subscribeBtn {
+    width: 110px;
+    height: 35px;
+    border-radius: 22px;
+    border: none;
+    outline: none;
+    background-color: #1da1f2;
+    color: white;
+}
+.trending-section {
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 320px;
+    height: 270px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+.trending-section-title h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.topic-info {
+    margin-bottom: 10px;
+}
+.topic-info span {
+    display: flex;
+}
+.topic-location {
+    font-size: 12px;
+}
+.topic {
+    font-weight: 600;
+}
+.trending-section-showmore {
+    font-size: 15px;
+    color: #1da1f2;
+}
+.Todays-News {
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 320px;
+    height: 280px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+.todays-news-title h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.todays-news-info {
+    margin-bottom: 10px;
+}
+.todays-news-caption {
+    margin-bottom: 10px;
+}
+.todays-news-account-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.todays-news-account-details span {
+    font-size: 13px;
+    color: #536471;
+    gap: 5px;
+}
+.todays-news-profilepicture img {
+    width: 40px;
+    height: 40px;
+    border-radius: 22px;
+    margin-right: 10px;
+}
+.todays-news-showmore {
+    font-size: 15px;
+    color: #1da1f2;
+}
+.suggested-accounts-section {
+    padding: 10px 20px;
+    border-radius: 20px;
+    width: 320px;
+    height: 350px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+}
+.suggested-accounts-title h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.suggested-accounts-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.suggested-accounts-profilepicture img {
+    width: 40px;
+    height: 40px;
+    border-radius: 22px;
+}
+.suggested-accounts-name {
+    font-weight: 600;
+}
+.suggested-accounts-username {
+    font-size: 13px;
+    color: #536471;
+}
+#followBtn {
+    margin: 20px 0px;
+    padding: 10px;
+    width: 70px;
+    height: 50px;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 22px;
+    cursor: pointer;
+}
+/* RESPONSIVE */
+@media(max-width: 1024px) {
+    .sidebar {
+        display: none;
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+
+    .feed {
+        width: 75%;
+        margin-left: 25%;
+    }
+}
+@media(max-width: 600px) {
+
+    .sidebar {
+        display: none;
+    }
+
+    .feed {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+.dark {
+    background-color: #15202b;
+    color: white;
+}
+
+.dark .feed {
+    border-color: #38444d;
+}
+
+.dark textarea {
+    background-color: #22303c;
+    color: white;
+}
